@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Changelog vs git log: what Keep a Changelog actually requires (2026) — AI Changelog</title>
+<meta name="description" content="Why raw commit dumps fail users, and how Keep a Changelog + SemVer shape human release notes — with primary sources.">
+<link rel="canonical" href="https://ai-changelog.lxsaihub.com/blog/changelog-vs-git-log-keep-a-changelog-2026.html">
+<style>*{box-sizing:border-box}body{margin:0;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#0f172a;line-height:1.7;background:#fff}
+.wrap{max-width:760px;margin:0 auto;padding:48px 20px 80px}.by{color:#6366f1;font-weight:700;letter-spacing:.02em;text-transform:uppercase;font-size:12px}
+h1{font-size:34px;line-height:1.2;margin:.2em 0 .4em}h2{font-size:23px;margin:1.8em 0 .5em;color:#1e1b4b}
+p{margin:.6em 0}a{color:#4f46e5}table{width:100%;border-collapse:collapse;margin:1.2em 0;font-size:14px}
+th,td{border:1px solid #e2e8f0;padding:10px 12px;text-align:left;vertical-align:top}th{background:#eef2ff}
+ul{padding-left:1.2em}blockquote{margin:1em 0;padding:.8em 1em;background:#f8fafc;border-left:4px solid #6366f1;color:#475569}
+.cta{display:inline-block;margin-top:1.4em;padding:12px 22px;border-radius:999px;background:#4f46e5;color:#fff;text-decoration:none;font-weight:700}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Changelog vs git log: what Keep a Changelog actually requires (2026) — AI Changelog",
+      "description": "Why raw commit dumps fail users, and how Keep a Changelog + SemVer shape human release notes — with primary sources.",
+      "author": {
+        "@type": "Organization",
+        "name": "LX Micro-SaaS"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "LX Micro-SaaS",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://lxsaihub.com/logo.png"
+        }
+      },
+      "datePublished": "2026-09-16",
+      "dateModified": "2026-09-20",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://ai-changelog.lxsaihub.com/blog/changelog-vs-git-log-keep-a-changelog-2026.html"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "1. Start from notable changes, not every commit",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Keep a Changelog groups same-type changes, lists the latest version first, shows release dates, and asks you to state your versioning scheme. It also recommends an Unreleased section for upcoming work."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "2. Separate changelog from marketing release notes",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Keep a Changelog 2.0 guidance distinguishes the ongoing record (changelog) from a single-release announcement (release notes). Derive the announcement from the changelog — do not maintain two conflicting stories."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "3. SemVer signals breakages; the entry must still say so",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Under Semantic Versioning, a major bump means incompatible API change — but readers miss numbers. Highlight breaking changes in the entry (e.g. a clear Breaking: marker) and link migration steps when they are long."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "4. Automation is a draft, not a finished changelog",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tools in the conventional-changelog ecosystem can categorize Conventional Commits. Keep a Changelog still expects a person to decide what is notable and rewrite for readers."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body><div class="wrap">
+<p class="by">by AI Changelog (LX AI)</p>
+<h1>Changelog vs git log: what Keep a Changelog actually requires</h1>
+
+<p>Teams often paste <code>git log</code> into a release and call it done. Keep a Changelog is explicit: <strong>changelogs are for humans, not machines</strong>, and commit-log diffs are full of noise (merges, obscure titles, internal refactors).</p>
+<p>A changelog entry records a <em>notable difference</em> — often spanning several commits — written for people who install or upgrade. That is the job AI Changelog helps draft from your commit and PR notes.</p>
+<h2>1. Start from notable changes, not every commit</h2>
+<p>Keep a Changelog groups same-type changes, lists the latest version first, shows release dates, and asks you to state your versioning scheme. It also recommends an <code>Unreleased</code> section for upcoming work.</p>
+<h2>2. Separate changelog from marketing release notes</h2>
+<p>Keep a Changelog 2.0 guidance distinguishes the ongoing record (changelog) from a single-release announcement (release notes). Derive the announcement from the changelog — do not maintain two conflicting stories.</p>
+<h2>3. SemVer signals breakages; the entry must still say so</h2>
+<p>Under Semantic Versioning, a major bump means incompatible API change — but readers miss numbers. Highlight breaking changes in the entry (e.g. a clear <strong>Breaking:</strong> marker) and link migration steps when they are long.</p>
+<h2>4. Automation is a draft, not a finished changelog</h2>
+<p>Tools in the conventional-changelog ecosystem can categorize Conventional Commits. Keep a Changelog still expects a person to decide what is notable and rewrite for readers.</p>
+
+<h2>References</h2>
+<ul>
+<li><a href="https://keepachangelog.com/en/1.1.0/">Keep a Changelog 1.1.0</a></li><li><a href="https://keepachangelog.com/en/2.0.0/">Keep a Changelog 2.0.0 guidance</a></li><li><a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning 2.0.0</a></li><li><a href="https://github.com/conventional-changelog/conventional-changelog">conventional-changelog</a></li>
+</ul>
+<p>Want to try the product? <a class="cta" href="https://ai-changelog.lxsaihub.com/">AI Changelog</a></p>
+<p style="color:#64748b;font-size:13px">Generated 2026-09-16 · citations from public primary sources · no fabricated traffic metrics</p>
+
+<section class="related" style="margin-top:3rem;border-top:1px solid #e2e8f0;padding-top:1.5rem">
+  <h2>Related reads</h2>
+  <ul>
+    <li><a href="/blog/ai-changelog-tools-compared-2026.html">AI Changelog vs conventional-changelog vs GitHub Releases — AI Changelog</a></li>
+    <li><a href="/blog/complete-guide-ai-changelog-2026.html">The Complete Guide to AI Changelog in 2026 | AI Changelog</a></li>
+    <li><a href="https://lxsaihub.com/blog/topic-matrix.html">The LX AI Micro-SaaS Topic Matrix</a></li>
+  </ul>
+</section></div></body></html>
